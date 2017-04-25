@@ -1,9 +1,17 @@
+'''-------------------------------------------------------------------------------------
+Read data
+
+The data used in this tutorial is from CRSP via WRDS. The sample period is between
+1980 to 2016. The data file is named 'crsp_monthly.txt'. I choose the text format
+to store the data because:
+    1. CUSIP in other formats (eg. excel or csv) will miss leading zeros
+    2. The size of text file is smaller than other formats
+-------------------------------------------------------------------------------------'''
+
 # Import required libraries
 import pandas as pd
 
 # Read CRSP monthly data
-'''Data is downloaded from WRDS between 1980 to 2016'''
-'''data file name is crsp_monthly.txt'''
 data_path = '/users/ml/git/'    # change to your data folder
 crsp_monthly_raw = pd.read_csv(data_path + 'crsp_monthly.txt', sep='\t', engine='python')
 print 'number of observations from raw CRSP data: %s' % len(crsp_monthly_raw)
