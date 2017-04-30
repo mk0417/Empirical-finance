@@ -37,8 +37,13 @@ for i in ['ret', 'siccd', 'dlret']:
 
 # Convert date to date format
 crsp_monthly['date'] = pd.to_datetime(crsp_monthly['date'], format='%Y%m%d')
-crsp_monthly['yr_mo'] = crsp_monthly['date'].apply(
-    lambda x: x.year) * 100 + crsp_monthly['date'].apply(lambda x: x.month)
+crsp_monthly['yr_mo'] = crsp_monthly['date'].apply(lambda x: x.year) * 100 + crsp_monthly['date'].apply(lambda x: x.month)
+
+# Output data
+'''
+Now we have the final dataset after sample selection (in previous tutorial) and data type adjustment
+'''
+crsp_monthly.to_csv(data_path+'crsp_monthly_clean_1.txt', sep='\t', index=False)
 
 # Compute summary statistics
 '''Pooled statistics'''
