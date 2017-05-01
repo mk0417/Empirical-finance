@@ -31,7 +31,6 @@ print len(permno_list)
 
 # Use at least 36-month historical information to estimate beta
 permno_num = pd.DataFrame({'n': stock_ret.groupby('permno')['ret'].count()})
-print permno_num.head()
 permno_num = permno_num[permno_num['n']>=36]
 print len(permno_num)
 
@@ -80,8 +79,9 @@ for i in stock_ret_1.columns[:10]:
             est = ols_reg(ret_data.ix[ret_data.index[j:j+window-1],i],ret_data.ix[ret_data.index[j:j+window-1],'vwretd'])
             beta_rolling.append((i,ret_data.index[j+window-1],est.params[1]))
 
-# Plot rolling beta
 beta_rolling_1 = pd.DataFrame(beta_rolling,columns=['permno','date','beta'])
+
+# Plot rolling beta
 beta_stock_list = beta_rolling_1.drop_duplicates(subset='permno')['permno'].reset_index(drop=True)
 print len(beta_stock_list)
 
