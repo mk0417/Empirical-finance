@@ -68,8 +68,8 @@ stock_ret_1 = stock_ret_1.join(mktret)
 print len(stock_ret_1)
 
 beta_rolling = []
-'''rolling window: number of observation to estimate beta'''
-window = 60
+window = 60 # rolling window: number of observation to estimate beta
+''' Just try first 10 stocks '''
 for i in stock_ret_1.columns[:10]:
     ret_data = stock_ret_1[[i,'vwretd']]
     ret_data = ret_data[(ret_data[i].notnull()) & (ret_data['vwretd'].notnull())]
