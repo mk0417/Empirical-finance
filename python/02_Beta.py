@@ -92,3 +92,18 @@ for i,j in zip(axes.flatten(),beta_stock_list):
     i.legend([])
 
 plt.show()
+
+# Test the relation between beta and stock return
+''' Market risk (beta) is the only source of risk by holding stocks according to CAPM, therefore
+beta should positively associate with stock return'''
+
+# First step is to compute average return of each stock
+stock_avg = pd.DataFrame({'ret': stock_ret.groupby('permno')['ret'].mean()})
+
+# Then we can run regression of ret = a + b*beta + e
+''' We expect b is significantly positive '''
+stock_avg['permno'] = stock_avg.index
+stock_avg.reset_index(drop=True,inplace=True)
+cross_section_reg = stock_avg.merge(beta_1,how='inner',on='permno')
+b = ols_reg(cross_section_reg['ret'],cross_section_reg['beta'])
+print b.summary()
