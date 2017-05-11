@@ -70,3 +70,5 @@ keep if inst_own <= 1
 order cusip rdate shares_sum_adj shares_total_adj inst_own inst_num
 sort cusip rdate
 save inst_own,replace
+
+/*Stata is not the best choice for large data. It runs 40 minutes while 7 minutes in Python*/
