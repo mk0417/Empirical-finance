@@ -59,7 +59,7 @@ drop obs-port
 
 // CAPM and 25 (5x5) portfolios formed on market value and book-to-makret ratio (after 1965)
 mat capm_25port_aft= J(25,8,0)
-mat colnames capm_25port_aft = mean std alpha b_mkt t_alpha t_mkt r2_adj
+mat colnames capm_25port_aft = obs mean std alpha b_mkt t_alpha t_mkt r2_adj
 local rnames
 local k = 1
 forvalues i = 1/5 {
