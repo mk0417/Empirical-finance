@@ -19,7 +19,7 @@ len(crsp_cusip)
 # Compustat CUSIP list
 security = pd.read_csv('~/data/wrds/raw/security.txt',sep='\t')
 security.columns = security.columns.map(str.lower)
-security_1 = security[security['cusip'].notnull()].copy()
+security_1 = security[(security['cusip'].notnull())&(security['cusip']='nan')&(security['excntry']=='USA')].copy()
 security_1['cusip'] = security_1['cusip'].apply(lambda x: str(x[:8]))
 comp_cusip = security_1.drop_duplicates(subset='cusip')[['gvkey','cusip']].sort_values('gvkey').reset_index(drop=True)
 
