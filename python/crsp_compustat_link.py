@@ -109,20 +109,6 @@ stocknames_1[stocknames_1['permno']==10532]
 
 security_1[security_1['gvkey']==1764][['tic','gvkey','iid','cusip','exchg','excntry','isin','tpci']]
 
-cc_link = msf_1[msf_1['yrm']>=196307].merge(cusip_comp_link[['permno','gvkey']],how='inner',on='permno')
-cc_link = cc_link.groupby('yrm')['permno'].count().to_frame('cusip').sort_index()
-nc_link = msf_1[msf_1['yrm']>=196307].merge(ncusip_comp_link[['permno','gvkey']],how='inner',on='permno')
-nc_link = nc_link.groupby('yrm')['permno'].count().to_frame('ncusip').sort_index()
-combine_link = msf_1[msf_1['yrm']>=196307].merge(ncusip_cusip_combine_1[['permno','gvkey']],how='inner',on='permno')
-combine_link = combine_link.groupby('yrm')['permno'].count().to_frame('combine').sort_index()
-link_compare = cc_link.join(nc_link).join(combine_link)
-link_compare['combine-ncusip'] = link_compare['combine'] - link_compare['ncusip']
-link_compare['combine-cusip'] = link_compare['combine'] - link_compare['cusip']
-link_compare.index = pd.to_datetime(link_compare.index,format='%Y%m')
-link_compare.index.name = 'date'
-link_compare[['combine-ncusip','combine-cusip']].plot(figsize=(10,3))
-plt.show()
-
 
 
 # ----------------------------  Generate PERMNO-GVKEY link table Using NCUSIP+CUSIP and name range -----------------------------
