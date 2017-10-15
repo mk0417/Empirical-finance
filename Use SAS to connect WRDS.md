@@ -10,6 +10,7 @@ There are two main advantages:
 >For Stata users, you have to transpose SAS data to 
 Stata data.
 
+### SAS code example
 ```sas
 /*Remote connect to WRDS server*/
 %let wrds = wrds-cloud.wharton.upenn.edu 4016;
@@ -48,6 +49,6 @@ run;
 
 You will see a pop-up window after you execute the code:
 
-<img src='/Users/ml/LUBS/PhD data management/programs/jupyter/wrdsuser.png'>
+![alt text](/Users/ml/LUBS/PhD data management/programs/jupyter/wrdsuser.png)
 
 Type your WRDS username and password and then you can be authorized.
