@@ -38,10 +38,10 @@ quit;
 signoff; *disconnect to WRDS server;
 
 
-/*-------------------------------------------------------------------------------------------------------
+/*----------------------------------------------------------------------------------------------------
   For Stata users, the code below can transfer SAS data to Stata data Please change the path where 
   you want to save your data
--------------------------------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------------------------------*/
 
 proc export data=yourlib.msf_sample outfile='d:\msf_sample.dta' dbms=dta replace;
 run;
