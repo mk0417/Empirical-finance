@@ -47,8 +47,4 @@ proc export data=yourlib.msf_sample outfile='d:\msf_sample.dta' dbms=dta replace
 run;
 ```
 
-You will see a pop-up window after you execute the code:
-
-![alt text](/Users/ml/LUBS/PhD data management/programs/jupyter/wrdsuser.png)
-
-Type your WRDS username and password and then you can be authorized.
+You will see a pop-up window after you execute the code. Type your WRDS username and password and then you can be authorized.
