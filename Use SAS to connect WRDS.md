@@ -48,11 +48,12 @@ run;
 ```
 
 You will see a pop-up window after you execute the code. Type your WRDS username and password and then you can be authorized.
-![](/Users/ml/LUBS/PhD data management/lecture/latex/class01/wrdsuser.png?raw=true)
+![alt text](/Users/ml/LUBS/PhD data management/lecture/latex/class01/wrdsuser.png?raw=true)
 
 ---
 Update: *good news for Stata users* 
 
 WRDS introduced PostgreSQL feature recently and this makes possible for Stata to connect WRDS. But you have to download PostgreSQL driver and configure it before building the connection.
-If you want to try, please follow the link below: 
+If you want to try, please follow the link below:
+
 <span style='color:blue'>https://www.stata.com/blog/wrds/Stata_WRDS.pdf</span>
