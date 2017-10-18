@@ -48,8 +48,9 @@ run;
 ```
 
 You will see a pop-up window after you execute the code. Type your WRDS username and password and then you can be authorized.
-![alt text](/Users/ml/LUBS/PhD data management/lecture/latex/class01/wrdsuser.png?raw=true)
+![alt text](https://github.com/mk0417/Empirical-finance/blob/master/png/wrdsauth.png?raw=True)
 
+---
 ---
 Update: *good news for Stata users* 
 
