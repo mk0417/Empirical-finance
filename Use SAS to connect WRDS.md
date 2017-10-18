@@ -2,7 +2,7 @@
 In addition to web query from WRDS website, you can use SAS to connect WRDS cloud to retrieve data.<br>
 There are two main advantages:
 1. Flexible: you can use SAS language or SQL to do more complex sample selection.
-2. Reuseable: you can make adjustments of SAS script and re-run it to update your sample at anytime. 
+2. Reusable: you can make adjustments of SAS script and re-run it to update your sample at anytime. 
 
 
 >For SAS users, this is even efficient for your workflow, because you can do your analysis immediately after you extract data from WRDS.
@@ -53,7 +53,7 @@ You will see a pop-up window after you execute the code. Type your WRDS username
 
 ---
 ---
-Update: *good news for Stata users* 
+***Update: good news for Stata users***
 
 WRDS introduced PostgreSQL feature recently and this makes possible for Stata to connect WRDS. But you have to download PostgreSQL driver and configure it before building the connection.
 If you want to try, please follow the link below:
