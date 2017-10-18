@@ -48,6 +48,7 @@ run;
 ```
 
 You will see a pop-up window after you execute the code. Type your WRDS username and password and then you can be authorized.
+
 ![alt text](https://github.com/mk0417/Empirical-finance/blob/master/png/wrdsauth.png?raw=True)
 
 ---
